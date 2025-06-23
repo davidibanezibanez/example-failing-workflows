@@ -1,0 +1,14 @@
+name: Fail Workflow 1
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  intentional-fail:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step that fails
+        run: exit 1
+      - name: This step will not run
+        run: echo "Should not see this"

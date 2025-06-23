@@ -1,0 +1,19 @@
+name: Fail Workflow 2
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Simulate build
+        run: |
+          echo "Building..."
+          false  # falla a propósito
+
+      - name: This should not run
+        run: echo "Skipped due to failure"
