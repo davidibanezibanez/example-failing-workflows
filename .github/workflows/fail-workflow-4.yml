@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  fail-job-1:
+  intentional-fail-job-4:
     runs-on: ubuntu-latest
     steps:
       - name: Failing step in Job 1
@@ -13,7 +13,7 @@ jobs:
           echo "This is Job 1"
           exit 1
 
-  fail-job-2:
+  intentional-fail-job-4_1:
     runs-on: ubuntu-latest
     steps:
       - name: Failing step in Job 2

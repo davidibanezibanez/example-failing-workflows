@@ -5,10 +5,10 @@ on:
     branches: [ main ]
 
 jobs:
-  intentional-fail:
+  intentional-fail-job-1:
     runs-on: ubuntu-latest
     steps:
-      - name: Step that fails
+      - name: Step that fails 1
         run: exit 1
       - name: This step will not run
         run: echo "Should not see this"

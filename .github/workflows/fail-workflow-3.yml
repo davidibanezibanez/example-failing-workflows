@@ -5,13 +5,11 @@ on:
     branches: [ main ]
 
 jobs:
-  double-failure:
+  intentional-fail-job-3:
     runs-on: ubuntu-latest
     steps:
       - name: First failing step
         run: exit 1
-        continue-on-error: true
 
       - name: Second failing step
         run: exit 1
-        continue-on-error: true
