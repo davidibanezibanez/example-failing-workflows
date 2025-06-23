@@ -1,7 +1,8 @@
 name: Fail Workflow 4
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [ main ]
 
 jobs:
   fail-job-1:
